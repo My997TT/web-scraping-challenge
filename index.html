@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mission to Mars</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="jumbotron text-center border-bottom">
+      <h1 class="font-weight-bold">Mission to Mars</h1>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h2><u>Latest Mars News</u></h2>
+      </div>
+    </div>
+    </br>
+    <div class="row">
+      <div class="col-md-12">
+        <h4>{{mars.latestmarsnews}}</h4>
+        <p>{{mars.newspar}}</p>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-md-8 border">
+        <h2 class=""><u>Featured Mars Image</u></h2>
+        </br>
+        <img style='height: 100%; width: 100%; object-fit: contain' src="{{mars.image}}" alt="Features Mars Image">
+      </div>
+      <div class="col-md-4">
+        <div class="border">
+          </br>
+          <h5>Current Weather on Mars</h5>
+          {{mars.weather}}
+        </div>
+        </br>
+        <div class="border">
+          <h5>Mars Facts</h5>
+          {{ mars.marsfacts |safe}}
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-md-8 offset-4">
+        <h2 class="align-items-center"><u>Mars hemispheres</u></h2>
+      </div>
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-md-12">
+                <h3> {{mars.titles1}} </h3>
+                <img src={{mars.imge_url1}} style="max-width:100%;
+           height:auto;" />
+              </div>
+              <div class="col-md-12">
+                <h3> {{mars.titles2}} </h3>
+                <img src={{mars.imge_url2}} style="max-width:100%;
+           height:auto;" />
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-md-12">
+                <h3> {{mars.titles3}} </h3>
+                <img src={{mars.imge_url3}} style="max-width:100%;
+           height:auto;" /3 </div>
+                <div class="col-md-12">
+                  <h3> {{mars.titles4}} </h3>
+                  <img src={{mars.imge_url4}} style="max-width:100%;
+           height:auto;" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr>
+
+</body>
+
+</html>
